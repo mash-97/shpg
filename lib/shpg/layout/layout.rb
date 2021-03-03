@@ -1,7 +1,8 @@
-# Layout
+# layout/layout.rb
 
-require_relative("../ETOH_molder")
+require_relative("../ETOH_molder/ETOH_molder")
 require_relative("../granule/granule")
+require_relative("../asset/asset")
 
 module Shpg
   class Layout < ETOHMolder

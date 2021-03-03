@@ -1,8 +1,9 @@
-# Page
+# page/page.rb
 
-require_relative("../ETOH_molder")
+require_relative("../ETOH_molder/ETOH_molder")
 require_relative("../granule/granule")
 require_relative("../layout/layout")
+
 
 
 module Shpg
@@ -12,14 +13,11 @@ module Shpg
     
     def initialize(*args, **kwargs)
       super(*args, **kwargs)
-      self.setup()
-    end
-    
-    def setup()
+      @layout = nil
     end
     
     def get_result(*args, **kwargs)
-      @content = super()
+      @content = super(*args, **kwargs)
       result = @content
       
       if @layout then

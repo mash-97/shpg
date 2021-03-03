@@ -1,5 +1,7 @@
-# Granule
-require_relative("../ETOH_molder")
+# granule/granule.rb
+
+require_relative("../ETOH_molder/ETOH_molder")
+require_relative("../asset/asset")
 
 module Shpg
   class Granule < Shpg::ETOHMolder

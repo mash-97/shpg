@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/mash-97/file_disperser.git
+  revision: be6b437a3b28b5ebcd2163dac7bb8d0d6115780a
+  specs:
+    file_disperser (0.2.0)
+
+GIT
+  remote: https://github.com/mash-97/mashz.git
+  revision: cb31aa1798bdac3a8ce9b7ec19a7c94bcd6fdff1
+  specs:
+    mashz (0.2.0)
+
 PATH
   remote: .
   specs:
@@ -8,6 +20,7 @@ GEM
   specs:
     ast (2.4.2)
     colored (1.2)
+    find (0.1.0)
     minitest (5.14.4)
     parallel (1.20.1)
     parser (3.0.0.0)
@@ -37,6 +50,9 @@ PLATFORMS
 
 DEPENDENCIES
   colored (~> 1.2)
+  file_disperser (~> 0.2.0)!
+  find (~> 0.1.0)
+  mashz (~> 0.2.0)!
   minitest (~> 5.0)
   rake (~> 13.0)
   rubocop (~> 1.7)
