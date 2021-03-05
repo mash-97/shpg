@@ -2,6 +2,7 @@
 
 #~ require 'yaml'
 #~ require 'tempfile'
+require "fileutils"
 
 require_relative("asset")
 require_relative("file_checksum")

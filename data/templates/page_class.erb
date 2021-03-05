@@ -1,0 +1,12 @@
+class <%= page_name.camelize %> < Shpg::Page 
+
+  NAME = "<%= page_name.snakify %>"
+  ERB_TEMPLATE_FILE_PATH = File.join(__dir__, "<%= page_name.snakify %>.erb")
+  
+  # instance data can be initialized here.
+  def setup()
+    # initialize your data here
+  end
+  
+end
+

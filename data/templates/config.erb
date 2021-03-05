@@ -1,0 +1,9 @@
+# configuration file for <%= site_name.snakify %>
+
+class <%= site_name.camelize %>Config < Shpg::Config 
+  SITE_NAME = "<%= site_name.snakify %>"
+  OUTPUT_DIR_NAME = "output"
+  PAGES_PATH = File.join(__dir__, "pages.rb")
+end
+
+$SITE_CONFIG_CLASS = <%= site_name.camelize %>Config

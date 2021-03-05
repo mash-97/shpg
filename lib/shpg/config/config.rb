@@ -3,17 +3,17 @@
 module Shpg
   class Config 
     SITE_NAME = ""
-    LAYOUTS_DIRS = []
-    ASSETS_DIRS = []
-    OUTPUT_DIR = ""
-    PAGES_INFS_FILE_PATH = "pages.rb"
+    OUTPUT_DIRNAME = "output"
+    PAGES_PATH = "pages.rb"
+    
+    attr_accessor :site_name
+    attr_accessor :output_dirname
+    attr_accessor :pages_path 
     
     def initialize()
       @site_name = self.class::SITE_NAME
-      @layouts_dirs = self.class::LAYOUTS_DIRS
-      @assets_dirs = self.class::ASSETS_DIRS 
-      @output_dir = self.class::OUTPUT_DIR 
-      @pages_infs_file_path = self.class::PAGES_INFS_FILE_PATH
+      @output_dirname = self.class::OUTPUT_DIRNAME
+      @pages_path = self.class::PAGES_PATH
     end
 
   end

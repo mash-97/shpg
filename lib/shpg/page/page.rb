@@ -11,9 +11,10 @@ module Shpg
     include Shpg::Granule::Includer
     include Shpg::Layout::Setter
     
+    
     def initialize(*args, **kwargs)
       super(*args, **kwargs)
-      @layout = nil
+      @layout = kwargs[:layout]
     end
     
     def get_result(*args, **kwargs)

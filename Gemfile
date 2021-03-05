@@ -22,3 +22,5 @@ gem "mashz", "~> 0.2.0", :groups => [:development, :test], :git => "https://gith
 gem "file_disperser", "~> 0.2.0", :group => :test, :git => "https://github.com/mash-97/file_disperser.git"
 
 gem "find", "~> 0.1.0"
+
+gem "thor", "~> 1.1"
