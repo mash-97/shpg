@@ -26,12 +26,15 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
   end
   spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.executables   = ["shpg"] # spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
-
+  spec.add_dependency "tempfile", "~> 0.1.1"
+  spec.add_dependency "thor", "~> 1.1.0"
+  spec.add_dependency "colored", "~> 1.2"
+  spec.add_dependency "adsf", "~> 1.4.5"
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
 end

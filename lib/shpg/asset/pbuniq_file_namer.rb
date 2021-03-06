@@ -78,8 +78,7 @@ module Shpg
 	return result
       end
       
-      def self.get_safe_uniq_filename(dir_entries, file_path, try_limit = NUM_TRY_LIMIT)
-	file_name = File.basename(file_path)
+      def self.get_safe_uniq_filename(dir_entries, file_name, try_limit = NUM_TRY_LIMIT)
 	
 	try_limit.times do |i|
 	  tempfn = ""

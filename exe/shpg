@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+require("thor")
+
+require_relative("../lib/shpg")
+require_relative("../lib/cli/shpg_cli")
+
+Shpg::ShpgCli.start(ARGV)

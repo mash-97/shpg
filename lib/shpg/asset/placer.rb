@@ -34,10 +34,13 @@ module Shpg
       def includeAsset(asset_path)
 	asset_checksum = Shpg::Asset::FileChecksum.get_checksum(asset_path)
 	dest_path = getPathFromContainer(asset_checksum)
+	
 	if not dest_path then
-	  filename = Shpg::Asset::PBUniqFileNamer.get_safe_uniq_filename(Dir.entries(@dest_dir), asset_path, try_limit=3000)
+	  filename = File.basename(asset_path)
+	  if File.exist?(File.join(@dest_dir, filename)) then
+	    filename = Shpg::Asset::PBUniqFileNamer.get_safe_uniq_filename(Dir.entries(@dest_dir), filename, try_limit=3000)
+	  end
 	  dest_path = File.join(@dest_dir, filename) if filename
-	  dest_path = nil if not filename
 	else
 	  return dest_path
 	end
