@@ -59,7 +59,7 @@ After installing the gem, `shpg` should be available as cli program in the syste
 $ shpg create_site mango
 ```
 
-A basic structure for the site should be available inside the mango directory with a index page. We can create page by `create_site` command. Considering a page with the name `fazlee`:
+A basic structure for the site should be available inside the mango directory with a index page. We can create page by `create_page` command. Considering a page with the name `fazlee`:
 
 ```bash
 $ cd mango
