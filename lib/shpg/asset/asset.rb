@@ -16,11 +16,11 @@ module Shpg
 
         placed_asset_path = @placer.includeAsset(asset_abs_path)
         rel_path = placed_asset_path.split(File.dirname(@placer.dest_dir))[1]
-        if rel_path[0]==File::SEPARATOR then
+        if rel_path[0] == File::SEPARATOR
           rel_path = rel_path[1..]
         end
 
-        return rel_path  
+        return rel_path
       end
     end
   end

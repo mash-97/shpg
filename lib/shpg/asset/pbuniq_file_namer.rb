@@ -55,10 +55,10 @@ module Shpg
         try_limit.times do |i|
           tempfn = ""
           tempfn = if File.extname(file_name).length > 0
-                     (file_name.split(File.extname(file_name))[0]) + (i + 1).to_s + File.extname(file_name)
-                   else
-                     file_name + (i + 1).to_s
-                   end
+              (file_name.split(File.extname(file_name))[0]) + (i + 1).to_s + File.extname(file_name)
+            else
+              file_name + (i + 1).to_s
+            end
           return tempfn unless dir_entries.include?(tempfn)
         end
         nil
@@ -79,10 +79,10 @@ module Shpg
         try_limit.times do |i|
           tempfn = ""
           tempfn = if File.extname(file_name).length > 0
-                     (file_name.split(File.extname(file_name))[0]) + (i + 1).to_s + File.extname(file_name)
-                   else
-                     file_name + (i + 1).to_s
-                   end
+              (file_name.split(File.extname(file_name))[0]) + (i + 1).to_s + File.extname(file_name)
+            else
+              file_name + (i + 1).to_s
+            end
           return tempfn unless dir_entries.include?(tempfn)
         end
         nil

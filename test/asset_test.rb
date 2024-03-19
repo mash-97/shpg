@@ -1,12 +1,11 @@
-require 'test_helper'
+require "test_helper"
 
 class AssetTest < Minitest::Test
-
   def setup()
     @assets_dir = File.expand_path("assets", File.dirname(__FILE__))
     FileUtils.mkdir(@assets_dir) if not Dir.exist?(@assets_dir)
 
-    @assets = TH.generateTestAssets(@assets_dir, "style.css" => 1024, "style.scss" => 2048, "me.jpg" => 1024**2, "m.png" => 2*1024**2)
+    @assets = TH.generateTestAssets(@assets_dir, "style.css" => 1024, "style.scss" => 2048, "me.jpg" => 1024 ** 2, "m.png" => 2 * 1024 ** 2)
     @dispersed_assets = TH.fillWithTestAssets(@assets_dir, @assets)
 
     @output_dir = File.expand_path("output", __dir__)
@@ -14,8 +13,7 @@ class AssetTest < Minitest::Test
 
     @placer = Shpg::Asset::Placer.new(@output_dir)
 
-    @ptl = ->(path){return "<%= include_asset('#{path}') %>"}
-
+    @ptl = ->(path) { return "<%= include_asset('#{path}') %>" }
   end
 
   def teardown()
@@ -33,8 +31,8 @@ class AssetTest < Minitest::Test
 
       # @placer's @container's last element should be for the asset
       puts("\tpage_result: #{page_result} and @placer.container[-1]: #{@placer.container[-1]}")
-      assert( @placer.container.collect{|x|x[:checksum]} ==
-		@placer.container.collect{|x|x[:checksum]}.uniq )
+      assert(@placer.container.collect { |x| x[:checksum] } ==
+             @placer.container.collect { |x| x[:checksum] }.uniq)
     end
   end
 end

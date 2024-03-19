@@ -7,8 +7,8 @@ module Shpg
   module Asset
     # FileChecksum uses MD5
     class FileChecksum
-      DEFAULT_BLOCK_SIZE = 1024**2
-      SIZE_CHECK_LIMIT = 10 * 1024**2		# 10 MB
+      DEFAULT_BLOCK_SIZE = 1024 ** 2
+      SIZE_CHECK_LIMIT = 10 * 1024 ** 2		# 10 MB
       attr_accessor :checksum, :file_path
 
       def initialize(file_path)

@@ -15,8 +15,8 @@ module Shpg
     end
 
     def initializePaths()
-      @erb_file_path = File.join(page_name.snakify, page_name.snakify+".erb")
-      @class_file_path = File.join(page_name.snakify, page_name.snakify+".rb")
+      @erb_file_path = File.join(page_name.snakify, page_name.snakify + ".erb")
+      @class_file_path = File.join(page_name.snakify, page_name.snakify + ".rb")
     end
 
     def create_page_template_erb_file()
@@ -37,8 +37,7 @@ module Shpg
   end
 end
 
-
-if $0 == __FILE__ then
+if $0 == __FILE__
   cpg = Shpg::CreatePageGenerator.new(["nash", "./pages.rb"])
   cpg.destination_root = "pages"
   cpg.invoke_all()
